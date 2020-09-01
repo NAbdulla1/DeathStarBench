@@ -45,10 +45,10 @@ spec:
       containers:
       - name: social-graph-redis
         image: redis:alpine
-        resources: 
-          requests: 
-            cpu: "200m"
-            memory: "20Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "200m"
+        #    memory: "20Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

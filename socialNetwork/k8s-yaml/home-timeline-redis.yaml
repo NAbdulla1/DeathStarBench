@@ -47,10 +47,10 @@ spec:
       containers:
       - name: home-timeline-redis
         image: redis:alpine
-        resources: 
-          requests: 
-            cpu: "5m"
-            memory: "20Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "5m"
+        #    memory: "20Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

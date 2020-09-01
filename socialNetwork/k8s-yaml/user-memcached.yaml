@@ -46,10 +46,10 @@ spec:
       containers:
       - name: user-memcached
         image: poanpan/memcached:v1
-        resources: 
-          requests: 
-            cpu: "600m"
-            memory: "13Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "600m"
+        #    memory: "13Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

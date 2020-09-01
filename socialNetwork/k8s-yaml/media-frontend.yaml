@@ -63,10 +63,10 @@ spec:
           name: lua-scripts
         - mountPath: /usr/local/openresty/nginx/conf/nginx.conf
           name: nginx-conf
-        resources: 
-          requests: 
-            cpu: "5m"
-            memory: "20Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "5m"
+        #    memory: "20Mi"
       restartPolicy: Always
       volumes:
       # use pv

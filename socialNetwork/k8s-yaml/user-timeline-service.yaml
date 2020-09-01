@@ -50,10 +50,10 @@ spec:
       - name: user-timeline-service
         image: poanpan/social-network-microservices-local-jaeger:v0.0.1
         command: ["UserTimelineService"]
-        resources: 
-          requests: 
-            cpu: "1400m"
-            memory: "50Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "1400m"
+        #    memory: "50Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

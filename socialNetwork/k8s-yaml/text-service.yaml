@@ -49,10 +49,10 @@ spec:
       - name: text-service
         image: poanpan/social-network-microservices-local-jaeger:v0.0.1
         command: ["TextService"]
-        resources: 
-          requests: 
-            cpu: "1700m"
-            memory: "300Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "1700m"
+        #    memory: "300Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

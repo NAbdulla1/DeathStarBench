@@ -44,10 +44,10 @@ spec:
       containers:
       - name: media-mongodb
         image: poanpan/mongo:v1
-        resources: 
-          requests: 
-            cpu: "5m"
-            memory: "100Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "5m"
+        #    memory: "100Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

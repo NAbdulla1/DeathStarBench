@@ -47,10 +47,10 @@ spec:
       - name: media-service
         image: poanpan/social-network-microservices-local-jaeger:v0.0.1
         command: ["MediaService"]
-        resources: 
-          requests: 
-            cpu: "600m"
-            memory: "30Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "600m"
+        #    memory: "30Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon

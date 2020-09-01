@@ -57,10 +57,10 @@ spec:
       - name: compose-post-service
         image: poanpan/social-network-microservices-local-jaeger:v0.0.1
         command: ["ComposePostService"]
-        resources: 
-          requests: 
-            cpu: "5000m"
-            memory: "200Mi"
+        #resources: 
+        #  requests: 
+        #    cpu: "5000m"
+        #    memory: "200Mi"
       restartPolicy: Always
       # nodeName: 10.0.0.13
       # schedulerName: poseidon
