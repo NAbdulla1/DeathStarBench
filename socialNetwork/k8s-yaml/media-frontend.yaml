@@ -51,18 +51,18 @@ spec:
         - containerPort: 8080
         volumeMounts:
         # use pv
-        - mountPath: /usr/local/openresty/nginx/lua-scripts
-          name: deathstar-sn-mf-nfs-pvc
-          subPath: lua-scripts-k8s
-        - mountPath: /usr/local/openresty/nginx/conf/nginx.conf
-          name: deathstar-sn-mf-nfs-pvc
-          subPath: conf/nginx-k8s.conf
+        #- mountPath: /usr/local/openresty/nginx/lua-scripts
+        #  name: deathstar-sn-mf-nfs-pvc
+        #  subPath: lua-scripts-k8s
+        #- mountPath: /usr/local/openresty/nginx/conf/nginx.conf
+        #  name: deathstar-sn-mf-nfs-pvc
+        #  subPath: conf/nginx-k8s.conf
 
         # use host-path
-        # - mountPath: /usr/local/openresty/nginx/lua-scripts
-        #   name: lua-scripts
-        # - mountPath: /usr/local/openresty/nginx/conf/nginx.conf
-        #   name: nginx-conf
+        - mountPath: /usr/local/openresty/nginx/lua-scripts
+          name: lua-scripts
+        - mountPath: /usr/local/openresty/nginx/conf/nginx.conf
+          name: nginx-conf
         resources: 
           requests: 
             cpu: "5m"
@@ -70,18 +70,18 @@ spec:
       restartPolicy: Always
       volumes:
       # use pv
-      - name: deathstar-sn-mf-nfs-pvc
-        persistentVolumeClaim:
-          claimName: deathstar-sn-mf-nfs-pvc
+      #- name: deathstar-sn-mf-nfs-pvc
+      #  persistentVolumeClaim:
+      #    claimName: deathstar-sn-mf-nfs-pvc
         
       # use host-path
-      # - name: lua-scripts
-      #   hostPath: 
-      #     path: /root/DeathStarBench/socialNetwork/media-frontend/lua-scripts-k8s
-      #     type: Directory
-      # - name: nginx-conf
-      #   hostPath: 
-      #     path: /root/DeathStarBench/socialNetwork/media-frontend/conf/nginx-k8s.conf
-      #     type: File
+      - name: lua-scripts
+        hostPath: 
+          path: /root/DeathStarBench/socialNetwork/media-frontend/lua-scripts-k8s
+          type: Directory
+      - name: nginx-conf
+        hostPath: 
+          path: /root/DeathStarBench/socialNetwork/media-frontend/conf/nginx-k8s.conf
+          type: File
       # nodeName: 10.0.0.13
       # schedulerName: poseidon
